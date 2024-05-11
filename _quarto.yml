@@ -1,12 +1,14 @@
 project:
   type: website
+  resources:
+    - ads.txt 
   output-dir: docs
 
 website:
   title: "SpatialInsights"
   navbar:
     left: 
-      - text: Home
+      - text: About
         href: about.qmd
       - text: Blogs
         href: blogz.qmd
