@@ -1,5 +1,5 @@
 ---
-title: "The Evolution of Urban Landscapes: A Historical Perspective on Spatial Planning in Keny"
+title: "The Evolution of Urban Landscapes: A Historical Perspective on Spatial Planning in Kenya"
 author: "Ben Amollo"
 date: "2024-04-28"
 categories: [Spatial, Planning, Devolution, Sustainable]

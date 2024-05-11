@@ -1,0 +1,38 @@
+---
+title: "Contacts"
+---
+
+**You can reach us via the following;**
+
+email: kamspatial\@gmail.com
+
+facebook: www.facebook.com/kampspatial
+
+X: www.twitter.com/kampspatial
+
+LinkedIn: www.linkedin.com/kampspatial
+
+whatsapp: <https://whatsapp.com/+254721646495>
+
+```{r}
+#| echo: false
+#| warning: false
+
+invisible(suppressPackageStartupMessages(library(leaflet)))
+
+library(leaflet)
+library(htmltools)
+
+# Define the location of Greenspan Mall in Nairobi
+greenspan_location <- c(-1.2890699, 36.9010527)  # Latitude and Longitude
+
+# Create a leaflet map
+map <- leaflet() %>%
+  setView(lng = greenspan_location[2], lat = greenspan_location[1], zoom = 15) %>%
+  addTiles() %>%
+  addMarkers(lng = greenspan_location[2], lat = greenspan_location[1], popup = "We are located on the 2nd floor, wing B of the Greenspan Mall", label = "Our Physical Location")
+
+
+# Display the map
+map
+```

@@ -1,8 +1,8 @@
 ---
-title: "About"
-image: profile.jpg
+title: "Spatial Insights"
+image: spatial_thoughts.png
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: twitter
       text: Twitter
@@ -21,4 +21,14 @@ about:
       href: https://github.com
 ---
 
-About this blog
+**Navigating the Terrain of Spatial Planning**
+
+Welcome to **Spatial Insights**, your go-to hub for all things spatial planning in Kenya. Whether you're an physical and land use planner, a curious citizen, or an enthusiast eager to explore land use dynamics, this platform has you covered.
+
+Why **Spatial Insights**? Because we dive deep into Kenya's spatial planning, offering insightful analysis and up-to-date coverage on urban sprawl, rural development, infrastructure, and conservation.
+
+But **Spatial Insights** is more than information—it's a community. We invite you to share your thoughts and experiences, shaping the conversation on sustainable, inclusive communities.
+
+Join us as we navigate Kenya's spatial landscape together, forging a path toward a brighter tomorrow.
+
+"**Charting Kenya's Spatial Frontier, One Insight at a Time!"**

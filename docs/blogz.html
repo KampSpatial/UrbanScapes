@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SpatialInsights - Spatial Insights</title>
+<title>SpatialInsights</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,9 +30,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -65,15 +68,73 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -92,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blogz.html"> 
+    <a class="nav-link active" href="./blogz.html" aria-current="page"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
   <li class="nav-item">
@@ -139,49 +200,376 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">SpatialInsights</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Devolution">Devolution <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Disaster">Disaster <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Floods">Floods <span class="quarto-category-count">(1)</span></div><div class="category" data-category="GIS">GIS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="History">History <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Land Use">Land Use <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Land use">Land use <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Planning">Planning <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Spatial">Spatial <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Sustainable">Sustainable <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Urban">Urban <span class="quarto-category-count">(5)</span></div></div></div>
 <!-- main -->
-<div class="quarto-about-jolla content">
-  <img src="spatial_thoughts.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Spatial Insights</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://twitter.com" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://facebook.com" class="about-link" rel="" target="">
-    <i class="bi bi-facebook"></i>
-     <span class="about-link-text">Facebook</span>
-  </a>
-  <a href="https://web.whatsapp.com" class="about-link" rel="" target="">
-    <i class="bi bi-whatsapp"></i>
-     <span class="about-link-text">WhatsApp</span>
-  </a>
-  <a href="https://linkedin.com" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Urban,Disaster,Land Use,Planning,Floods" data-listing-date-sort="1715374800000" data-listing-file-modified-sort="1715425248296" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1722">
+<div class="thumbnail">
+<p><a href="./posts/Nai_Floodz/index.html" class="no-external"></a></p><a href="./posts/Nai_Floodz/index.html" class="no-external">
+<p><img src="./posts/Nai_Floodz/Floodz.PNG" class="thumbnail-image"></p>
+</a><p><a href="./posts/Nai_Floodz/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Nai_Floodz/index.html" class="no-external">Navigating the Deluge: Flood Resilience and Sustainable Land Use Strategies for Nairobi</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Nai_Floodz/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Urban'); return false;">
+Urban
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Disaster'); return false;">
+Disaster
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Land Use'); return false;">
+Land Use
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Planning'); return false;">
+Planning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Floods'); return false;">
+Floods
 </div>
 </div>
- <!-- /main -->
+<div class="listing-description">
+<a href="./posts/Nai_Floodz/index.html" class="no-external">In the bustling heart of East Africa, Nairobi stands as a stark symbol of urban hardship juxtaposed against a backdrop of natural beauty. A city that has grown exponentially…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Nai_Floodz/index.html" class="no-external">
+<div class="listing-date">
+May 11, 2024
+</div>
+<div class="listing-author">
+Ben Amollo
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Spatial,Planning,Devolution,Sustainable" data-listing-date-sort="1714597200000" data-listing-file-modified-sort="1715422491035" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="518">
+<div class="thumbnail">
+<p><a href="./posts/NSP/index.html" class="no-external"></a></p><a href="./posts/NSP/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\NSP\images\clipboard-345240261.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/NSP/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/NSP/index.html" class="no-external">From Vision to Action: Implementing Kenya’s National Spatial Plan</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/NSP/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Spatial'); return false;">
+Spatial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Planning'); return false;">
+Planning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Devolution'); return false;">
+Devolution
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Sustainable'); return false;">
+Sustainable
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/NSP/index.html" class="no-external">In the quest for sustainable development, effective spatial planning plays a pivotal role in guiding the growth and development of nations. Kenya, with its diverse…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/NSP/index.html" class="no-external">
+<div class="listing-date">
+May 2, 2024
+</div>
+<div class="listing-author">
+Ben Amollo
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Spatial,Planning,Land use,GIS" data-listing-date-sort="1714510800000" data-listing-file-modified-sort="1715422491004" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="513">
+<div class="thumbnail">
+<p><a href="./posts/Ke_Planning/index.html" class="no-external"></a></p><a href="./posts/Ke_Planning/index.html" class="no-external">
+<p><img src="./posts/Ke_Planning/gin.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/Ke_Planning/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Ke_Planning/index.html" class="no-external">Navigating the Terrain of Spatial Planning: Charting Kenya’s Path to Sustainable Development</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Ke_Planning/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Spatial'); return false;">
+Spatial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Planning'); return false;">
+Planning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Land use'); return false;">
+Land use
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GIS'); return false;">
+GIS
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Ke_Planning/index.html" class="no-external">Spatial planning stands as the cornerstone of sustainable development, especially in a country as diverse and rapidly evolving as Kenya. From bustling urban centers to…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Ke_Planning/index.html" class="no-external">
+<div class="listing-date">
+May 1, 2024
+</div>
+<div class="listing-author">
+Ben Amollo
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="Spatial,Planning,Devolution,Sustainable" data-listing-date-sort="1714251600000" data-listing-file-modified-sort="1715424192508" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="741">
+<div class="thumbnail">
+<p><a href="./posts/Hist/index.html" class="no-external"></a></p><a href="./posts/Hist/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\Hist\images\clipboard-3286030111.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/Hist/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Hist/index.html" class="no-external">The Evolution of Urban Landscapes: A Historical Perspective on Spatial Planning in Kenya</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Hist/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Spatial'); return false;">
+Spatial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Planning'); return false;">
+Planning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Devolution'); return false;">
+Devolution
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Sustainable'); return false;">
+Sustainable
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Hist/index.html" class="no-external">As Kenya strides into the future, its urban landscapes bear witness to a rich tapestry of historical, social, and economic forces. From the bustling streets of Nairobi to…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Hist/index.html" class="no-external">
+<div class="listing-date">
+Apr 28, 2024
+</div>
+<div class="listing-author">
+Ben Amollo
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="History,Spatial,Land Use,Urban" data-listing-date-sort="1713906000000" data-listing-file-modified-sort="1715422490988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="334">
+<div class="thumbnail">
+<p><a href="./posts/Hostorical_Context/index.html" class="no-external"></a></p><a href="./posts/Hostorical_Context/index.html" class="no-external">
+<p><img src="./posts/Hostorical_Context/Hist_Cont.PNG" class="thumbnail-image"></p>
+</a><p><a href="./posts/Hostorical_Context/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Hostorical_Context/index.html" class="no-external">Historical Context of Poor Spatial Planning in Kenya</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Hostorical_Context/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('History'); return false;">
+History
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Spatial'); return false;">
+Spatial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Land Use'); return false;">
+Land Use
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Urban'); return false;">
+Urban
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Hostorical_Context/index.html" class="no-external">The challenges of poor spatial planning in Kenya have deep roots that can be traced back to historical and political factors spanning different periods of governance.…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Hostorical_Context/index.html" class="no-external">
+<div class="listing-date">
+Apr 24, 2024
+</div>
+<div class="listing-author">
+Ben Amollo
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="Spatial,Land Use,Urban" data-listing-date-sort="1713906000000" data-listing-file-modified-sort="1715422491050" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="449">
+<div class="thumbnail">
+<p><a href="./posts/post-with-code/index.html" class="no-external"></a></p><a href="./posts/post-with-code/index.html" class="no-external">
+<p><img src="./posts/post-with-code/cosp.PNG" class="thumbnail-image"></p>
+</a><p><a href="./posts/post-with-code/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/post-with-code/index.html" class="no-external">Kenyan Spatial Planning Dynamics</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/post-with-code/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Spatial'); return false;">
+Spatial
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Land Use'); return false;">
+Land Use
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Urban'); return false;">
+Urban
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/post-with-code/index.html" class="no-external">Spatial planning in Kenya faces a complex landscape of challenges and opportunities. This crucial aspect of development and urban management is pivotal for shaping…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/post-with-code/index.html" class="no-external">
+<div class="listing-date">
+Apr 24, 2024
+</div>
+<div class="listing-author">
+Ben Amollo
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="Urban,Disaster,Land Use" data-listing-date-sort="1713646800000" data-listing-file-modified-sort="1715422490941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="407">
+<div class="thumbnail">
+<p><a href="./posts/GIS_RS_Planning/index.html" class="no-external"></a></p><a href="./posts/GIS_RS_Planning/index.html" class="no-external">
+<p><img src="./posts/GIS_RS_Planning/GIS_RS.PNG" class="thumbnail-image"></p>
+</a><p><a href="./posts/GIS_RS_Planning/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/GIS_RS_Planning/index.html" class="no-external">Leveraging GIS and Remote Sensing for Decision-Making in Spatial Planning</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/GIS_RS_Planning/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Urban'); return false;">
+Urban
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Disaster'); return false;">
+Disaster
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Land Use'); return false;">
+Land Use
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/GIS_RS_Planning/index.html" class="no-external">The integration of Geographic Information Systems (GIS) and remote sensing technologies presents a transformative opportunity for enhancing decision-making in spatial…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/GIS_RS_Planning/index.html" class="no-external">
+<div class="listing-date">
+Apr 21, 2024
+</div>
+<div class="listing-author">
+Melody Lijodi
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="Urban,Disaster,Land Use" data-listing-date-sort="1713646800000" data-listing-file-modified-sort="1715422491050" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="381">
+<div class="thumbnail">
+<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
+<p><img src="./posts/welcome/Flooding.PNG" class="thumbnail-image"></p>
+</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/welcome/index.html" class="no-external">Flooding in Nairobi City is a Result of Poor Spatial Planning</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/welcome/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Urban'); return false;">
+Urban
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Disaster'); return false;">
+Disaster
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Land Use'); return false;">
+Land Use
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/welcome/index.html" class="no-external">Flooding in Nairobi city has become a recurrent and devastating phenomenon, largely attributed to the shortcomings of spatial planning. This blog delves into the root causes…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/welcome/index.html" class="no-external">
+<div class="listing-date">
+Apr 21, 2024
+</div>
+<div class="listing-author">
+Melody Lijodi
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -202,6 +590,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
