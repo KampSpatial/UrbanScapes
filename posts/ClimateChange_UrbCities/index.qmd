@@ -1,6 +1,6 @@
 ---
 title: "Climate Change Resilience in Urban Planning: Adaptation Strategies for Kenyan Cities"
-author: "Irene Chesang"
+author: "Irine Chesang"
 date: "2024-05-08"
 categories: [Climate Change, Urban, Disaster, Land Use, Planning]
 image: "climate.PNG"

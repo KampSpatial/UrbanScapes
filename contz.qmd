@@ -4,15 +4,17 @@ title: "Contacts"
 
 **You can reach us via the following;**
 
-email: kamspatial\@gmail.com
+[{{< fa envelope size=5x >}}]{style="color:red"} kamspatial\@gmail.com
 
-facebook: www.facebook.com/kampspatial
+[{{< fa brands facebook size=5x >}}]{style="color:red"} kampspatial
 
-X: www.twitter.com/kampspatial
+[{{< fa brands instagram size=5x >}}]{style="color:red"} @kampspatial
 
-LinkedIn: www.linkedin.com/kampspatial
+[{{< fa brands twitter size=5x >}}]{style="color:red"} @kampspatial
 
-whatsapp: <https://whatsapp.com/+254721646495>
+[{{< fa brands linkedin size=5x >}}]{style="color:red"} kampspatial
+
+[{{< fa brands whatsapp size=5x >}}]{style="color:red"} [KampSpatial](https://web.whatsapp.com/ "Whatsapp"){.uri}
 
 ```{r}
 #| echo: false
@@ -36,3 +38,5 @@ map <- leaflet() %>%
 # Display the map
 map
 ```
+
+<i class="fa-solid fa-circle-plus fa-beat"></i> <i class="fa-solid fa-heart fa-beat"></i> <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;" ></i> <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 2s;"></i> <i class="fa-solid fa-heart fa-beat" style="--fa-beat-scale: 2.0;"></i>
