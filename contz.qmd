@@ -4,7 +4,7 @@ title: "Contacts"
 
 **You can reach us via the following;**
 
-[{{< fa envelope size=5x >}}]{style="color:red"} [Send us an e-mail](https://mail.google.com "gmail"){.uri}
+[{{< fa envelope size=5x >}}]{style="color:red"} [Send us an e-mail](https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRlRZNKrwwXWphLgtqSfNLcQcvHhgPCbcDcvpQLrhKWpXwsrnWCGGNMZpffvsSRBwbFsXkV "gmail"){.uri}
 
 [{{< fa brands facebook size=5x >}}]{style="color:red"} [Visit our Facebook Page](https://facebook.com/BenAmollo "FB"){.uri}
 

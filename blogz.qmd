@@ -7,7 +7,7 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
-page-layout: grid
+page-layout: full
 grid-options:
   columns: 3
   gap: 20px
